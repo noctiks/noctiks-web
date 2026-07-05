@@ -11,7 +11,7 @@
 <meta name="theme-color" content="#09090B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#09090B;--card:#131317;--border:#26262C;--border-2:#34343C;--ink:#F4F4F5;--ink-soft:#D6D6DB;--gray:#A1A1AA;--muted:#83838D;--faint:#5C5C66;--purple:#A020F0;--purple-light:#C77DFF;--grad:linear-gradient(118deg,#B863F7,#A020F0 58%,#8B17D4);--maxw:820px}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -21,7 +21,7 @@
   .aurora{position:fixed;top:-25%;right:-15%;width:60vw;height:60vw;max-width:760px;max-height:760px;border-radius:50%;filter:blur(50px);background:radial-gradient(circle at 50% 50%,rgba(160,32,240,.18),transparent 66%);z-index:-1;pointer-events:none}
   header{position:sticky;top:0;z-index:10;background:rgba(9,9,11,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
   .nav-inner{max-width:1180px;margin-inline:auto;padding:0 24px;height:66px;display:flex;align-items:center;justify-content:space-between}
-  .logo{display:flex;align-items:center;gap:11px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;color:var(--ink)}
+  .logo{display:flex;align-items:center;gap:11px;font-family:'Archivo','Space Grotesk',sans-serif;font-weight:800;font-size:19px;color:var(--ink)}.logo-badge{width:30px;height:30px;flex-shrink:0;display:block}.logo-dot{color:var(--purple)}
   .logo .mark{width:30px;height:30px;border-radius:9px;background:var(--grad);position:relative;box-shadow:0 0 18px -4px rgba(160,32,240,.8)}
   .logo .mark::after{content:"";position:absolute;inset:7px 7px auto auto;width:9px;height:9px;border-radius:50%;background:var(--bg)}
   .back{font-family:'JetBrains Mono',monospace;font-size:13.5px;color:var(--muted);display:inline-flex;align-items:center;gap:7px}
@@ -45,7 +45,7 @@
 
 <header>
   <div class="nav-inner">
-    <a href="index.html" class="logo"><span class="mark"></span>NOCTIKS</a>
+    <a href="index.html" class="logo"><svg class="logo-badge" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="23" fill="#0B0B0D" stroke="rgba(255,255,255,.13)" stroke-width="3"/><g transform="translate(12.93,73.00) scale(0.0669,-0.0669)"><path d="M74.9130859375 0.0V687.0869140625H233.6943359375L483.76123046875 367.953125Q490.93505859375 359.779296875 502.28271484375 344.659912109375Q513.63037109375 329.54052734375 524.793212890625 314.377685546875Q535.9560546875 299.21484375 541.216796875 289.9541015625L546.216796875 291.041015625Q545.67333984375 312.6494140625 545.67333984375 333.529541015625Q545.67333984375 354.40966796875 545.67333984375 367.953125V687.0869140625H711.97607421875V0.0H554.19482421875L288.998046875 335.72021484375Q276.10693359375 352.06787109375 264.791748046875 369.0244140625Q253.4765625 385.98095703125 245.67236328125 397.32861328125L240.67236328125 396.24169921875Q241.2158203125 379.98095703125 241.2158203125 363.491943359375Q241.2158203125 347.0029296875 241.2158203125 335.72021484375V0.0Z" fill="#F5F5F7"/><path d="M859.41357421875 0.0V166.58544921875H1032.607421875V0.0Z" fill="#A020F0"/></g></svg>NOCTIKS<span class="logo-dot">.</span></a>
     <a href="index.html" class="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Späť na web</a>
   </div>
 </header>
