@@ -372,6 +372,10 @@
   .foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
   .foot-brand{max-width:320px}
   .foot-brand p{color:var(--gray);font-size:14.5px;margin-top:16px;line-height:1.6}
+  .social-row{display:flex;gap:10px;margin-top:20px}
+  .social-btn{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:var(--card);border:1px solid var(--border);color:var(--gray);transition:border-color .2s,color .2s,transform .2s}
+  .social-btn:hover{border-color:rgba(160,32,240,.5);color:var(--purple-light);transform:translateY(-2px)}
+  .social-btn svg{width:20px;height:20px}
   .foot-links{display:flex;gap:48px;flex-wrap:wrap}
   .foot-col h4{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
   .foot-col a{display:block;color:var(--gray);font-size:14.5px;margin-bottom:11px;transition:color .2s}
@@ -821,6 +825,14 @@
                 <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
                 <span><b>@noctiks.sk</b><span>Napíšte nám na Instagrame</span></span>
               </a>
+              <a class="cmethod" href="https://www.youtube.com/watch?v=gedkJREAVtI" target="_blank" rel="noopener noreferrer">
+                <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-2C18.88 4 12 4 12 4s-6.88 0-8.59.42a2.78 2.78 0 0 0-1.95 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.41 19c1.71.42 8.59.42 8.59.42s6.88 0 8.59-.42a2.78 2.78 0 0 0 1.95-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></span>
+                <span><b>Demo video</b><span>Pozrite, ako AI agent funguje</span></span>
+              </a>
+              <a class="cmethod" href="https://www.linkedin.com/in/tomassevciknoctiks/" target="_blank" rel="noopener noreferrer">
+                <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+                <span><b>LinkedIn</b><span>Spojme sa</span></span>
+              </a>
             </div>
           </div>
 
@@ -859,6 +871,11 @@
       <div class="foot-brand">
         <a href="#top" class="logo"><svg class="logo-badge" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="23" fill="#0B0B0D" stroke="rgba(255,255,255,.13)" stroke-width="3"/><g transform="translate(12.93,73.00) scale(0.0669,-0.0669)"><path d="M74.9130859375 0.0V687.0869140625H233.6943359375L483.76123046875 367.953125Q490.93505859375 359.779296875 502.28271484375 344.659912109375Q513.63037109375 329.54052734375 524.793212890625 314.377685546875Q535.9560546875 299.21484375 541.216796875 289.9541015625L546.216796875 291.041015625Q545.67333984375 312.6494140625 545.67333984375 333.529541015625Q545.67333984375 354.40966796875 545.67333984375 367.953125V687.0869140625H711.97607421875V0.0H554.19482421875L288.998046875 335.72021484375Q276.10693359375 352.06787109375 264.791748046875 369.0244140625Q253.4765625 385.98095703125 245.67236328125 397.32861328125L240.67236328125 396.24169921875Q241.2158203125 379.98095703125 241.2158203125 363.491943359375Q241.2158203125 347.0029296875 241.2158203125 335.72021484375V0.0Z" fill="#F5F5F7"/><path d="M859.41357421875 0.0V166.58544921875H1032.607421875V0.0Z" fill="#A020F0"/></g></svg>NOCTIKS<span class="logo-dot">.</span></a>
         <p>Autonómni AI agenti pre moderný obchod a služby. Preberáme vašu komunikáciu a meníme support na rast — 24/7.</p>
+        <div class="social-row">
+          <a class="social-btn" href="https://www.youtube.com/watch?v=gedkJREAVtI" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-2C18.88 4 12 4 12 4s-6.88 0-8.59.42a2.78 2.78 0 0 0-1.95 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.41 19c1.71.42 8.59.42 8.59.42s6.88 0 8.59-.42a2.78 2.78 0 0 0 1.95-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+          <a class="social-btn" href="https://www.instagram.com/noctiks.sk" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="social-btn" href="https://www.linkedin.com/in/tomassevciknoctiks/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
       </div>
       <div class="foot-links">
         <div class="foot-col">
