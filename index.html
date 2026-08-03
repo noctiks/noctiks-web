@@ -153,7 +153,7 @@
   .hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.6;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 35%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 35%,#000 30%,transparent 75%)}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
   @media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:48px}}
-  .hero h1{font-size:clamp(38px,6.4vw,68px);letter-spacing:-.03em;max-width:14ch}
+  .hero h1{font-size:clamp(32px,5.1vw,54px);letter-spacing:-.03em;max-width:21ch;text-wrap:balance}
   .hero .lead{font-size:clamp(17px,1.9vw,21px);max-width:46ch;margin-top:24px}
   .hero-actions{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
   .hero-trust{margin-top:46px}
@@ -212,6 +212,39 @@
   .ptag{display:inline-block;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.06em;color:var(--purple-light);background:rgba(160,32,240,.1);border:1px solid rgba(160,32,240,.25);padding:4px 10px;border-radius:999px}
 
   /* ===================== PRICING ===================== */
+  .feat .fgroup{list-style:none;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:20px 0 10px;padding:0}
+  .feat .fgroup:first-child{margin-top:0}
+
+  /* ---- priplatky pod cennikom ---- */
+  .addons{margin-top:34px;border:1px solid var(--border);border-radius:18px;padding:24px 26px 8px;background:var(--card)}
+  .addons-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+  .addons-row{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}
+  .addon{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:15px 0;border-top:1px solid var(--border)}
+  .addon-name{color:var(--muted);font-size:14.5px;line-height:1.45}
+  .addon-price{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;color:var(--ink);white-space:nowrap}
+  .addon-price small{font-family:'JetBrains Mono',monospace;font-weight:400;font-size:11px;color:var(--faint);margin-left:3px}
+  @media(max-width:760px){.addons-row{grid-template-columns:1fr}}
+
+  /* ---- cennik: hierarchia ceny ---- */
+  .price-main{display:flex;align-items:baseline;gap:3px;margin:2px 0 7px}
+  .price-main .amt{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(40px,4vw,52px);letter-spacing:-.04em;line-height:1;color:var(--ink)}
+  .price-main .cur{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:24px;line-height:1;color:var(--ink);opacity:.7}
+  .price-main .per{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--faint);margin-left:5px}
+  .price-main .amt-txt{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:32px;letter-spacing:-.02em;line-height:1.15;color:var(--ink)}
+  .price-sub{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--faint);padding-bottom:20px;border-bottom:1px solid var(--border);margin-bottom:20px}
+  .plan.featured .price-sub{border-color:var(--border-2)}
+
+  /* ---- kanalovy pas ---- */
+  .chan-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:9px}
+  .chan{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+  .chan i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:5px 9px;border-radius:8px;border:1px solid var(--border);color:var(--faint);transition:all .25s var(--ease)}
+  .chan i.on{border-color:rgba(160,32,240,.5);background:rgba(160,32,240,.13);color:var(--purple-light)}
+  .plan:hover .chan i.on{background:rgba(160,32,240,.2)}
+
+  /* ---- jednoduchsi zoznam ---- */
+  .feat li{font-size:14.5px;line-height:1.5}
+  .plan--custom{border-style:dashed}
+  .plan-note{color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:26px}
   .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px;align-items:stretch}
   @media(max-width:980px){.pricing-grid{grid-template-columns:1fr;max-width:480px;margin-inline:auto}}
   .plan{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:34px 30px;display:flex;flex-direction:column;position:relative;transition:transform .3s var(--ease),border-color .3s}
@@ -426,7 +459,7 @@
     <div class="hero-grid">
       <div>
         <span class="eyebrow reveal">AI podpora pre e-shopy</span>
-        <h1 class="reveal">AI agent, ktorý za vás rieši <span class="grad-text">support a komunikáciu so zákazníkmi.</span></h1>
+        <h1 class="reveal">AI agent, ktorý za vás rieši <span class="grad-text">support a komunikáciu so zákazníkmi.</span></h1>
         <p class="lead reveal">Noctiks AI agent je vytvorený tak, aby dokázal pomôcť a odpovedať zákazníkovi doslova kedykoľvek.</p>
         <div class="hero-actions reveal">
           <a href="#kontakt" class="btn btn-primary">Chcem vidieť demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -497,9 +530,9 @@
 
 <section class="section" id="sluzby">
     <div class="container">
-      <span class="eyebrow reveal">Ako to zmení váš deň</span>
-      <h2 class="h-section reveal">Nie je to chatovacie okno. Je to niekto, <span class="grad-text">kto vždy zdvihne.</span></h2>
-      <p class="lead reveal">Agent sa naučí váš katalóg, dopravu aj reklamačné podmienky. Potom preberie komunikáciu, ktorá vám dnes zožerie polovicu dňa — a v noci vás stojí objednávky.</p>
+      <span class="eyebrow reveal">Ako to zmení vaše podnikanie</span>
+      <h2 class="h-section reveal">AI agent, ktorý preberie <span class="grad-text">support a komunikáciu so zákazníkmi.</span></h2>
+      <p class="lead reveal">Agent sa naučí váš katalóg, dopravu aj reklamačné podmienky. Potom preberie váš support a komunikáciu.</p>
       <div class="grid-2">
         <div class="vcard reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3>Vedomosti, ktoré neodídu s ľuďmi</h3><p>Nový brigádnik sa učí týždeň a o pol roka odíde. Agent sa váš katalóg, cenník aj podmienky naučí za jeden deň — a nezabudne ich nikdy.</p></div>
         <div class="vcard reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Štyri otázky, ktoré chodia stále dokola</h3><p>Kde je balík. Do kedy to príde. Môžem to vrátiť. Máte to skladom. Agent ich vybaví sám a k vám sa dostane už len to, čo naozaj potrebuje človeka.</p></div>
@@ -512,7 +545,7 @@
 <section class="section section--alt" id="kalkulacka">
     <div class="container">
       <span class="eyebrow reveal">Spočítajte si to</span>
-      <h2 class="h-section reveal">Kalkulačka stratených objednávok</h2>
+      <h2 class="h-section reveal">Kalkulačka stratených objednávok.</h2>
       <p class="lead reveal">Tri čísla, ktoré o svojom e-shope viete. Ukážeme vám, koľko objednávok vám ročne ujde len preto, že sa zákazník nemal koho opýtať.</p>
 
       <div class="calc reveal">
@@ -687,47 +720,90 @@
     <div class="container">
       <span class="eyebrow reveal">Balíky</span>
       <h2 class="h-section reveal">Vyberte si, koľko toho <span class="grad-text">agent prevezme.</span></h2>
-      <p class="lead reveal">Žiadne poplatky za správy ani tokeny. Mesačný paušál je konečný a zahŕňa prevádzku, licencie aj podporu.</p>
+      <p class="lead reveal">Žiadne poplatky za jednotlivé správy ani tokeny. Mesačný paušál je konečný a zahŕňa prevádzku, licencie aj podporu.</p>
       <div class="pricing-grid">
 
-        <div class="plan reveal">
-          <div class="pname">Noctiks GO</div>
-          <p class="pdesc">Pre firmy, ktoré chcú prestať strácať zákazníkov kvôli pomalým reakciám.</p>
-          <div class="price-block">
-            <div class="price-row"><span class="k">Setup</span><span class="v">2 490 €</span></div>
-            <div class="price-row"><span class="k">Mesačne</span><span class="v">499 €<small>/mes</small></span></div>
+        <div class="plan featured reveal">
+          <div class="badge">Najčastejšia voľba</div>
+          <div class="pname">Noctiks One</div>
+          <p class="pdesc">Agent na vašom webe. Pre e-shopy, ktoré chcú prestať odpovedať na tie isté otázky dokola.</p>
+          <div class="price-main"><span class="amt">299</span><span class="cur">€</span><span class="per">/mesiac</span></div>
+          <div class="price-sub">Nasadenie 990 € jednorazovo</div>
+          <div class="chan-label">Kanály</div>
+          <div class="chan">
+            <i class="on">Web</i>
+            <i>Messenger</i>
+            <i>WhatsApp</i>
+            <i>E-mail</i>
           </div>
           <ul class="feat">
-            
-            <li class="incl"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg></span>Všetko z balíka GO</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Otázky o produktoch, veľkostiach a dostupnosti</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Stav objednávky a sledovanie zásielky</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Vrátenie tovaru a reklamácie</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Doprava, platby a obchodné podmienky</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Odovzdanie konverzácie vám, keď treba človeka</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Mesačný prehľad · do 800 konverzácií</li>
           </ul>
-          <a href="#kontakt" class="btn btn-primary" style="width:100%">Mám záujem</a>
+          <a href="#kontakt" class="btn btn-primary" style="width:100%;margin-top:auto">Mám záujem<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
 
         <div class="plan reveal">
-          <div class="pname">Noctiks MAX</div>
-          <p class="pdesc">Komplexná digitálna transformácia pre lídrov na trhu.</p>
-          <div class="price-block">
-            <div class="price-row"><span class="k">Setup</span><span class="v">5 990 €</span></div>
-            <div class="price-row"><span class="k">Mesačne</span><span class="v">1 299 €<small>/mes</small></span></div>
+          <div class="pname">Noctiks Omni</div>
+          <p class="pdesc">Keď vám zákazníci píšu aj na Messenger, Instagram alebo WhatsApp.</p>
+          <div class="price-main"><span class="amt">549</span><span class="cur">€</span><span class="per">/mesiac</span></div>
+          <div class="price-sub">Nasadenie 1 290 € jednorazovo</div>
+          <div class="chan-label">Kanály</div>
+          <div class="chan">
+            <i class="on">Web</i>
+            <i class="on">Messenger</i>
+            <i class="on">WhatsApp</i>
+            <i class="on">E-mail</i>
           </div>
           <ul class="feat">
-            
-            <li class="incl"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg></span>Všetko z balíka PRO</li>
+            <li class="incl"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg></span>Všetko z balíka One</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Messenger a Instagram DM</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>WhatsApp Business</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>E-mailová schránka</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Jedna história zákazníka naprieč kanálmi</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Odovzdanie človeku na ktoromkoľvek kanáli</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Prioritné doladenie · do 2 000 konverzácií</li>
           </ul>
-          <a href="#kontakt" class="btn btn-ghost" style="width:100%">Mám záujem</a>
+          <a href="#kontakt" class="btn btn-ghost" style="width:100%;margin-top:auto">Mám záujem</a>
+        </div>
+
+        <div class="plan plan--custom reveal">
+          <div class="pname">Noctiks Enterprise</div>
+          <p class="pdesc">Pre e-shopy s vlastnou platformou, väčším objemom alebo viacerými trhmi.</p>
+          <div class="price-main"><span class="amt-txt">Na mieru</span></div>
+          <div class="price-sub">Rozsah aj cena po konzultácii</div>
+          <div class="chan-label">Kanály</div>
+          <div class="chan">
+            <i class="on">Web</i>
+            <i class="on">Messenger</i>
+            <i class="on">WhatsApp</i>
+            <i class="on">E-mail</i>
+            <i class="on">+ vlastné</i>
+          </div>
+          <p class="plan-note">Na úvodnej konzultácii prejdeme váš e-shop, systémy aj objem komunikácie. Podľa toho navrhneme rozsah aj cenu — žiadne škatuľky, do ktorých sa musíte vojsť.</p>
+          <a href="#kontakt" class="btn btn-ghost" style="width:100%;margin-top:auto">Dohodnúť konzultáciu<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
 
       </div>
-      <p class="pricing-note reveal">// Konečný mesačný paušál — bez skrytých poplatkov za správy či tokeny</p>
+      <div class="addons reveal">
+        <div class="addons-label">Príplatky k ľubovoľnému balíku</div>
+        <div class="addons-row">
+        <div class="addon"><span class="addon-name">Druhý e-shop alebo jazyková mutácia</span><span class="addon-price">+149 €<small>/mes</small></span></div>
+        <div class="addon"><span class="addon-name">+500 konverzácií mesačne</span><span class="addon-price">+79 €<small>/mes</small></span></div>
+        </div>
+      </div>
+      <p class="pricing-note reveal">// Ceny sú bez DPH. Mesačný paušál je konečný — bez poplatkov za správy či tokeny.</p>
     </div>
   </section>
 
 <section class="section section--alt" id="garancia">
     <div class="container">
       <span class="eyebrow reveal">Vaše riziko</span>
-      <h2 class="h-section reveal">Nechceme, aby ste to brali <span class="grad-text">ako stávku.</span></h2>
-      <p class="lead reveal">Ste e-shop, ktorý nás nepozná. Preto je to nastavené tak, aby ste videli výsledok skôr, než sa k čomukoľvek zaviažete.</p>
+      <h2 class="h-section reveal">Naša služba a záruka k vám.</h2>
       <div class="grid-2">
         <div class="vcard reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Najprv uvidíte, až potom sa rozhodujete</h3><p>Agenta natrénujeme na vašom vlastnom obsahu a pošleme vám ho vyskúšať. Uvidíte ho odpovedať na vaše produkty, vašu dopravu a vaše podmienky — ešte pred akýmkoľvek podpisom.</p></div>
         <div class="vcard reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></div><h3>Bez dlhodobej viazanosti</h3><p>Mesačný paušál beží mesiac po mesiaci. Ak usúdite, že to vášmu e-shopu nedáva zmysel, skončíme — bez pokút a bez presviedčania.</p></div>
